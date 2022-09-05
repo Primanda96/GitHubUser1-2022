@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".activity.DetailActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <View
+           android:id="@+id/view"
+           android:layout_width="match_parent"
+           android:layout_height="402dp"
+           android:background="#f36363"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.0" />
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/received_avatar"
+           android:layout_width="485dp"
+           android:layout_height="201dp"
+           android:layout_marginTop="70dp"
+           app:civ_border_color="#FFFFFF"
+           app:civ_border_width="1.5dp"
+           app:layout_constraintBottom_toTopOf="@+id/received_name"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           tools:src="@tools:sample/avatars" />
+
+       <TextView
+           android:id="@+id/received_name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:gravity="center"
+           android:text="@string/recname"
+           android:textColor="#FFFFFF"
+           android:textSize="17sp"
+           app:layout_constraintBottom_toTopOf="@+id/cardView"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/received_avatar" />
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardView"
+           android:layout_width="300dp"
+           android:layout_height="100dp"
+           android:layout_marginTop="10dp"
+           android:elevation="2dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/received_name" >
+
+           <TextView
+               android:id="@+id/tv_follower"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="40dp"
+               android:layout_marginTop="20dp"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:text="@string/follower" />
+
+           <TextView
+               android:id="@+id/tv_following"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="170dp"
+               android:text="@string/following"/>
+
+           <TextView
+               android:id="@+id/received_follower"
+               android:layout_width="75dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="45dp"
+               android:layout_marginTop="50dp"
+               android:text="@string/rec_follower"
+               android:textColor="#f36363"
+               android:textSize="20sp" />
+
+           <TextView
+               android:id="@+id/received_following"
+               android:layout_width="49dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="170dp"
+               android:layout_marginTop="50dp"
+               android:textColor="#f36363"
+               android:text="@string/rec_follower"
+               android:textSize="20sp" />
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView
+           android:id="@+id/tv_username"
+           android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textSize="22sp"
+           android:textStyle="bold"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/cardView"
+           android:text="@string/txt_username"
+           />
+       <TextView
+           android:id="@+id/received_username"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:text="@string/txt_username"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@id/tv_username"
+           android:textStyle="italic"
+           />
+
+       <TextView
+           android:id="@+id/tv_repository"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textSize="22sp"
+           android:textStyle="bold"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/received_username"
+           android:text="@string/txt_repository"
+           />
+       <TextView
+           android:id="@+id/received_repository"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:text="@string/txt_repository"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@id/tv_repository"
+           android:textStyle="italic"
+           />
+
+       <TextView
+           android:id="@+id/tv_company"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textSize="22sp"
+           android:textStyle="bold"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/received_repository"
+           android:text="@string/txt_company"
+           />
+       <TextView
+           android:id="@+id/received_company"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:text="@string/txt_company"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@id/tv_company"
+           android:textStyle="italic"
+           />
+
+       <TextView
+           android:id="@+id/tv_location"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           android:textSize="22sp"
+           android:textStyle="bold"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@+id/received_company"
+           android:text="@string/txt_location"
+           />
+       <TextView
+           android:id="@+id/received_location"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:text="@string/txt_location"
+           android:gravity="center"
+           app:layout_constraintTop_toBottomOf="@id/tv_location"
+           android:textStyle="italic"
+           />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
